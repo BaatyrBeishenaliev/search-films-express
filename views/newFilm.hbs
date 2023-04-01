@@ -1,0 +1,159 @@
+<style>
+    body {
+        background: black;
+        color: white;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        color: transparent;    
+	      -webkit-background-clip: text;
+	      background-clip: text;
+	      background-image: linear-gradient(to right, red, fuchsia);
+    }
+
+    .films-block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+        background-color: black;
+        color: white;
+        width: 600px;
+        margin: 0 auto;
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        -webkit-box-shadow: 0px 5px 31px 22px rgba(11, 253, 255, 0.2);
+      -moz-box-shadow: 0px 5px 31px 22px rgba(11, 253, 255, 0.2);
+      box-shadow: 0px 5px 31px 22px rgba(11, 253, 255, 0.2);
+    }
+
+    a:hover {
+        background-color: white;
+        color: black;
+        transition: all 500ms ease;
+        -webkit-box-shadow: 5px 5px 5px 2px rgba(140, 0, 255, 0.6);
+        -moz-box-shadow: 5px 5px 5px 2px rgba(140, 0, 255, 0.6);
+        box-shadow: 5px 5px 5px 2px rgba(0, 255, 246, 0.6);
+    }
+
+    input[name='movieName'] {
+      display: flex;
+      width: 300px;
+      margin: 0 auto;
+      height: 30px;
+      background-color: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid white;
+      color: white;
+      position: relative;
+      background-color: black;
+      top: 20px;
+    }
+
+    input[value='Искать'] {
+      display: flex;
+      width: 200px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: center;
+      -webkit-box-shadow: 0px 5px 31px 22px rgba(11, 253, 255, 0.2);
+      -moz-box-shadow: 0px 5px 31px 22px rgba(11, 253, 255, 0.2);
+      box-shadow: 0px 5px 31px 22px rgba(11, 253, 255, 0.2);
+      border: none;
+      border-radius: 10px;
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 900;
+      font-size: 18px;
+      height: 40px;
+    }
+
+    input[value='Искать']:hover {
+      transition: all 500ms ease;
+      background-color: white;
+      color: black;
+    }
+
+    .film-block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .film-photo img {
+      border-radius: 20px;
+    }
+
+    .color {
+      color: transparent;    
+	    -webkit-background-clip: text;
+	    background-clip: text;
+	    background-image: linear-gradient(to right, red, fuchsia);
+      font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .color1 {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+</style>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="title">
+          <h1>Страница для поиска фильмов</h1>
+        </div>
+        <div class="form-for-search-film">
+          <form action="/searchFilm">
+            <input type="text" name="movieName" placeholder="Введите название фильма"> <br><br>
+            <input type="submit" value="Искать">
+          </form>
+        </div>
+        <div class="film-block">
+          <div class="film-left-block">
+           <div class="film-photo">
+            <img src={{foto}} alt="film" width="250px" height="350px">
+        </div>
+        </div>
+        <div class="film-right-block">
+          <div class="film-title">
+          <h2><span class="color">Название фильма:</span> {{imia}}</h2>
+        </div>
+        <div class="description-film">
+          <p><span class="color color1">Дата релиза:</span> {{Released}}</p>
+          <p><span class="color color1">Актеры:</span> {{Actors}}</p>
+          <p><span class="color color1">Год:</span>{{Year}}</p>
+          <p><span class="color color1">Продолжительность:</span>{{RunTime}}</p>
+          <p><span class="color color1">Языки:</span>{{Language}}</p>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="/myFilms">Вернуться на страницу с моими фильмами</a>
+</div>
+</div>
